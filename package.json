@@ -34,7 +34,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "netlify": "npm run afterClone && npm run prepack && npm run dev:build",
-    "prepack": "nuxt-module-build build",
+    "prepack": "npx nuxt prepare && nuxt-module-build build",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "rm:lock": "rm -rf package-lock.json playground/package-lock.json",
     "test": "vitest run",
@@ -49,7 +49,7 @@
     "@vueuse/integrations": "^12.0.0",
     "focus-trap": "^7.6.2",
     "jump.js": "^1.0.2",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "sass": "^1.81.0"
   },
   "devDependencies": {
